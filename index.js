@@ -14,6 +14,23 @@ express()
 function calcRate(req, res) {
   const mail = req.query.mail;
   const weight = Number(req.query.weight);
-  const params = {mail: mail, weight: weight};
+  const cost = 0;
+  /*
+  if (mail = "Letters (Stamped)") {
+    if (weight <= 1) {
+      cost = 0.55;
+    }
+    else if (weight <= 2) {
+      cost = 0.70;
+    }
+    else if (weight <= 3) {
+      cost = 0.85;
+    }
+    else if (weight <= 3.5) {
+      cost = 1.00;
+    }
+  }
+  */
+  const params = {mail: mail, weight: weight, cost: cost};
   res.render("getRate", params);
 }
